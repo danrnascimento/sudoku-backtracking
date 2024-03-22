@@ -80,4 +80,4 @@ function processBoard(grid = createEmptyBoard(), row = 0, column = 0) {
   return null;
 }
 
-console.log(processBoard().join("\n"));
+console.log(processBoard());
