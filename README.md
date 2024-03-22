@@ -6,7 +6,7 @@ O Sudoku é um quebra-cabeça de lógica numérica que consiste em preencher uma
 
 ## Objetivo
 
-Independente da linguagem, o objetivo é criar uma função chamada `processBoard` responsável por encontrar a solução para um tabuleiro de Sudoku utilizando a técnica de busca recursiva com backtracking.
+Independente da linguagem, o objetivo é criar uma função chamada `processBoard` responsável por encontrar ou criar uma solução para um tabuleiro de Sudoku utilizando a técnica de busca recursiva com backtracking.
 
 ## Contribuição
 

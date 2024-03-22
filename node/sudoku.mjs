@@ -52,12 +52,6 @@ function canPlaceItem(grid, row, column, value) {
   return !InTheRow && !InTheCol && !InSubgrid;
 }
 
-/**
- * Função para criar ou solucionar um tabuleiro de sudoku
- * @param grid Grid completo do tabuleiro de sudoku
- * @param row A linha atual
- * @param column A coluna atual
- */
 function processBoard(grid = createEmptyBoard(), row = 0, column = 0) {
   if (row >= 9) return grid; // Se já passou por todas as linhas encerra e retorna a solucao
   if (column >= 9) return processBoard(grid, row + 1, 0); // Se terminou as colunas, passa pra proxima linha
@@ -66,12 +60,12 @@ function processBoard(grid = createEmptyBoard(), row = 0, column = 0) {
   for (let value of shuffle(range(1, 10))) {
     // Para cada valor entre 0 - 9 Verifica se o valor a ser preenchido é valido
     if (canPlaceItem(grid, row, column, value)) {
-      // Se sim atribui o valor a celula
-      grid[row][column] = value;
+      grid[row][column] = value; // Se sim atribui o valor a celula
       // Executa novamente a função passando para a próxima coluna e verifica se está completo
       if (processBoard(grid, row, column + 1)) {
         return grid; // Se temrinou de solunicionar retorna o grid.
       }
+
       // Caso o valor não tenha sido suficiente pra solução, retornamos o valor para 0 e esperamos a proxima tentativa
       grid[row][column] = 0;
     }
