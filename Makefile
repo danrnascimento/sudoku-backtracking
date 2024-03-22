@@ -1,7 +1,7 @@
 SHELL := /bin/bash
 
 run-node:
-	node  ./node/sudoku.mjs
+	node  ./node/sudoku.js
 
 run-python:
 	python3 ./python/sudoku.py
